@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="a" prefHeight="555.0" prefWidth="992.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trrp.lab1.controller.MainFrmController">
+   <children>
+      <VBox layoutY="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="38.0" prefWidth="992.0">
+               <children>
+                  <Button fx:id="btnLogin" mnemonicParsing="false" prefHeight="31.0" prefWidth="74.0" text="Войти">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnLogout" disable="true" mnemonicParsing="false" prefHeight="31.0" prefWidth="74.0" text="Выйти">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Pane fx:id="mainPain" disable="true" prefHeight="510.0" prefWidth="1002.0">
+               <children>
+                  <VBox layoutX="1.0" layoutY="2.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <TableView fx:id="tvComments" prefHeight="353.0" prefWidth="904.0">
+                                <columns>
+                                  <TableColumn fx:id="clmnCommentText" prefWidth="75.0" text="Список комментариев к фото: " />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                                 <HBox.margin>
+                                    <Insets right="8.0" />
+                                 </HBox.margin>
+                              </TableView>
+                              <Button fx:id="btnGetComment" maxWidth="90.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="73.0" text="Обновить" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="145.0" prefWidth="992.0">
+                           <children>
+                              <VBox prefHeight="165.0" prefWidth="907.0">
+                                 <children>
+                                    <Label text="Текст комментария">
+                                       <VBox.margin>
+                                          <Insets left="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextArea fx:id="inpComment" prefHeight="134.0" prefWidth="900.0" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox maxWidth="90.0" prefHeight="165.0" prefWidth="82.0">
+                                 <children>
+                                    <Button fx:id="btnAddComment" mnemonicParsing="false" text="Добавить">
+                                       <VBox.margin>
+                                          <Insets top="18.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button fx:id="btnEditComment" mnemonicParsing="false" text="Изменить">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button fx:id="btnDeleteComment" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="Удалить">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
